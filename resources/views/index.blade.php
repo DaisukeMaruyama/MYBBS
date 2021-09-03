@@ -9,8 +9,8 @@
         <div class="container">
             <h1>MYBBS</h1>
             <ul>
-                @forelse ($posts as $post)
-                  <li>{{ $post }}</li>
+                @forelse ($posts as $i => $post)
+            <li><a href="/posts/{{ $i }}">{{ $post }}</a></li>
                 @empty
                   <li>No posts yet</li>
                 @endempty
