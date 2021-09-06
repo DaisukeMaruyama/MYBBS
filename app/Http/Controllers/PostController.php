@@ -15,12 +15,20 @@ class PostController extends Controller
           ->with(["posts" => $posts]);
     }
 
-    public function show($id) {
+    //public function show($id) {
 
-        $post = Post::findOrFail($id);
+    //    $post = Post::findOrFail($id);
+
+    //    return view('posts.show')
+    //      ->with(["post" => $post]);
+    //}
+
+    //implicit binding
+    public function show(Post $post) {
 
         return view('posts.show')
-          ->with(["post" => $post]);
+          ->with(['post' => $post]);
+
     }
 
 
