@@ -5,7 +5,7 @@
 
     <h1>
         <span>MYBBS</span>
-        <a href="{{route(posts.create)}}">[Add]</a>
+        <a href="{{route('posts.create')}}">[Add]</a>
     </h1>
     <ul>
         @forelse ($posts as $post)
