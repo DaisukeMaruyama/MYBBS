@@ -3,7 +3,10 @@
         MYBBS
     </x-slot>
 
-    <h1>MYBBS</h1>
+    <h1>
+        <span>MYBBS</span>
+        <a href="">[Add]</a>
+    </h1>
     <ul>
         @forelse ($posts as $post)
             <li>
