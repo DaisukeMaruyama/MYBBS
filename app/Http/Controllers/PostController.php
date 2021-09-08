@@ -54,5 +54,11 @@ class PostController extends Controller
           ->route('posts.index');
     }
 
+    public function edit(Post $post) {
+
+        return view('posts.edit')
+          ->with(['post' => $post]);
+
+    }
 
 }
