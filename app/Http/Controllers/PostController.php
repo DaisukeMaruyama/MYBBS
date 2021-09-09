@@ -61,4 +61,21 @@ class PostController extends Controller
 
     }
 
+    public function update(Request $request, Post $post) {
+        $request->validate([
+            'title' => 'required|min:3',
+            'body' => 'required'
+        ],[
+            'title.required' => 'タイトルは必須です。',
+            'title.min' => ':min文字以上入力してください。',
+            'body.required' => '本文は必須です。',
+        ]);
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        return redirect()
+          ->route('posts.show', $post);
+    }
 }
