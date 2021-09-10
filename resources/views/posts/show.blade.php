@@ -8,7 +8,7 @@
     <h1>
         <span>{{$post->title}}</span>
         <a href="{{route('posts.edit', $post)}}">[Edit]</a>
-        <form method="post" action="{{route('posts.destroy', $post)}}}">
+        <form method="post" action="{{route('posts.destroy', $post)}}">
             @method('DELETE')
             @csrf
             <button class="btn">[x]</button>
