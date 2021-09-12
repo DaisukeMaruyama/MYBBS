@@ -16,6 +16,16 @@
     </h1>
     <p>{!! nl2br(e($post->body)) !!}</p>
 
+    <h2>
+        <ul>
+            @foreach ($post->comments as $comment)
+            <li>
+                {{$comment->body}}
+            </li>
+            @endforeach
+        </ul>
+    </h2>
+
     <script>
         'use strict';
         const delete_post = document.getElementById('delete_post');
