@@ -14,6 +14,7 @@
             <button class="btn">[x]</button>
         </form>
     </h1>
+    
     <p>{!! nl2br(e($post->body)) !!}</p>
 
     <h2>
