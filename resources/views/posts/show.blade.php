@@ -14,10 +14,10 @@
             <button class="btn">[x]</button>
         </form>
     </h1>
-    
+
     <p>{!! nl2br(e($post->body)) !!}</p>
 
-    <h2>
+    <h2>Comments</h2>
         <ul>
             @foreach ($post->comments as $comment)
             <li>
@@ -25,7 +25,6 @@
             </li>
             @endforeach
         </ul>
-    </h2>
 
     <script>
         'use strict';
