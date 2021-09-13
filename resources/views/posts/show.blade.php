@@ -19,6 +19,14 @@
 
     <h2>Comments</h2>
         <ul>
+            <li>
+                <form method="post" action="" class="comment-form">
+                    @method('POST')
+                    @csrf
+                    <input type="text" name="body">
+                    <button>Add</button>
+                </form>
+            </li>
             @foreach ($post->comments as $comment)
             <li>
                 {{$comment->body}}
