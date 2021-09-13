@@ -20,7 +20,7 @@
     <h2>Comments</h2>
         <ul>
             <li>
-                <form method="post" action="" class="comment-form">
+                <form method="post" action="{{route('comments.stroe', $post)}}" class="comment-form">
                     @method('POST')
                     @csrf
                     <input type="text" name="body">
