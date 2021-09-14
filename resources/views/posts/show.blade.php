@@ -8,7 +8,7 @@
     <h1>
         <span>{{$post->title}}</span>
         <a href="{{route('posts.edit', $post)}}">[Edit]</a>
-        <form method="post" action="{{route('posts.destroy', $post)}}" id="delete_post">
+        <form method="post" action="{{ route('posts.destroy', $post) }}" id="delete_post">
             @method('DELETE')
             @csrf
             <button class="btn">[x]</button>
@@ -20,7 +20,7 @@
     <h2>Comments</h2>
         <ul>
             <li>
-                <form method="post" action="{{route('comments.stroe', $post)}}" class="comment-form">
+                <form method="post" action="{{ route('comments.store', $post) }}" class="comment-form">
                     @method('POST')
                     @csrf
                     <input type="text" name="body">
