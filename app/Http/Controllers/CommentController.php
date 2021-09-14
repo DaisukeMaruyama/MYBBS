@@ -11,6 +11,13 @@ class CommentController extends Controller
 {
     public function store(Request $request, Post $post)
     {
+
+        $request->validate([
+            'body' => 'required',
+        ],[
+            'body.required' => '入力必須項目です。',
+        ]);
+
         $comment = new Comment();
         $comment->post_id = $post->id;
         $comment->body = $request->body;
