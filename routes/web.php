@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Model\Controller\CommentController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +45,5 @@ Route::delete('/posts/{post}/destroy', [PostController::class, 'destroy'])
 //comment
 
 Route::post('/posts/{post}/comments', [CommentController::class, 'store'])
-    ->name('comments.store')
-    ->where('post', '[0-9]+');
+  ->name('comments.store')
+  ->where('post', '[0-9]+');
